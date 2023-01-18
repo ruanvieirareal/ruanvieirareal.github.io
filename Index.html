@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fotos de Cachorrinhos</title>
+  </head>
+  <body>
+    <h1>Fotos de Cachorrinhos Aleatórias</h1>
+    <img id="dog-photo" src="" alt="Foto de um cachorrinho">
+    <button id="generate-button">Gerar Nova Imagem</button>
+    <script>
+      // Lista de URLs de fotos de cachorrinhos
+      var dogPhotos = [
+        "https://images.dog.ceo/breeds/affenpinscher/n02110627_10074.jpg",
+        "https://images.dog.ceo/breeds/african/n02116738_1018.jpg",
+        "https://images.dog.ceo/breeds/airedale/n02096051_1009.jpg",
+        "https://images.dog.ceo/breeds/akita/An_Akita_Inu.jpg",
+        // Adicione aqui as URLs das suas próprias fotos de cachorrinhos
+        "https://photos.app.goo.gl/eZNP6BSk8NsSTF1J7
+      ];
+      
+      // Obtém o botão pelo seu ID
+      var generateButton = document.getElementById("generate-button");
+      
+      // Adiciona uma função de "clique" ao botão
+      generateButton.addEventListener("click", function() {
+        // Seleciona uma foto aleatória da lista de fotos de cachorrinhos
+        var randomDogPhoto = dogPhotos[Math.floor(Math.random() * dogPhotos.length)];
+      
+        // Atribui a foto selecionada para a tag <img>
+        document.getElementById("dog-photo").src = randomDogPhoto;
+      });
+    </script>
+  </body>
+</html>
